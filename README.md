@@ -27,6 +27,7 @@ Abrir http://127.0.0.1:4173. El servidor sirve `dist/`. Después de editar, reco
 - `public/fuentes.html`: procedencia, privacidad y límites de la demostración.
 - `scripts/`: construcción, comprobación, servidor y publicación.
 - `docs/ARQUITECTURA.md`: evolución sin reconstruir la interfaz.
+- `docs/VERIFICACION.md`: comprobaciones realizadas y límites de la revisión.
 
 ## Alcance funcional
 
@@ -51,6 +52,7 @@ npm run build
 npm run check
 node scripts/publish-github.mjs
 node scripts/publish-github.mjs --status
+node scripts/verify-public.mjs
 ```
 
 `main` conserva las fuentes y `gh-pages` publica únicamente `dist/`. Los cambios requieren reconstrucción y una nueva ejecución del script. `.publication.json` conserva el repositorio y la URL, sin secretos. No se ha contratado dominio, hosting de pago ni suscripciones.
