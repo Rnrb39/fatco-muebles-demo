@@ -1,0 +1,10 @@
+import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import assert from 'node:assert/strict';
+import { products } from '../src/data/catalog.js';
+import { projects } from '../src/data/gallery.js';
+const {url}=JSON.parse(await readFile('.publication.json','utf8'));
+const paths=['index.html','robots.txt','fuentes.html','src/styles.css','src/app.js','src/components/catalog.js','src/data/config.js','src/data/catalog.js','src/data/gallery.js','src/data/testimonials.js','src/services/contact.js','assets/favicon.svg',...products.flatMap(p=>p.images.map(i=>`assets/${i}`)),...projects.map(p=>`assets/${p.image}`)];
+const hash=(bytes,path)=>createHash('sha256').update(/\.(html|txt|css|js|svg)$/.test(path)?bytes.toString('utf8').replaceAll('\r\n','\n'):bytes).digest('hex');
+const results=await Promise.all([...new Set(paths)].map(async path=>{const response=await fetch(new URL(path,url));assert.equal(response.status,200,`${path}: HTTP ${response.status}`);const remote=Buffer.from(await response.arrayBuffer());const local=await readFile(`dist/${path}`);assert.equal(hash(remote,path),hash(local,path),`${path}: contenido público distinto`);return path;}));
+console.log(`OK: ${results.length} archivos públicos HTTP 200, con el mismo contenido que el build local (saltos de línea normalizados). URL: ${url}`);
