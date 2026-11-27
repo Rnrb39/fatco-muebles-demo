@@ -48,3 +48,7 @@ node scripts/publish-github.mjs --status
 ```
 
 Las capturas de esta sesión se guardan localmente en `docs/qa/`, excluidas del repositorio. La prueba de navegador fue una revisión guiada, no una suite de automatización persistida.
+
+## Actualización con material real — 27/11/2026
+
+La evidencia y los límites de la revisión de esta versión están en [PERSONALIZACION-2026-11-27.md](PERSONALIZACION-2026-11-27.md). Sustituye las referencias de contenido de la versión inicial: ahora se usan exclusivamente las cinco fotografías, el logotipo y los dos videos entregados por FATCO.
