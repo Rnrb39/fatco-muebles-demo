@@ -31,7 +31,7 @@ Abrir http://127.0.0.1:4173. El servidor sirve `dist/`. Después de editar, reco
 
 ## Alcance funcional
 
-Inicio, muebles a medida, catálogo ilustrativo de seis propuestas, filtros por ambiente, búsqueda combinada sin distinción de tildes, estado vacío y restablecimiento, fichas con consulta individual, galería ampliable, proceso propuesto, presentación, espacio de testimonios, cotización validada con resumen editable mediante regreso al formulario, copia de consulta, enlaces a Instagram y botón flotante de WhatsApp. Navegación móvil, enfoque visible, cierre de modales por Escape, reducción de movimiento y carga diferida de imágenes.
+Inicio, muebles a medida, selección de tres alternativas fotografiadas por FATCO, clasificadas en línea estándar y fabricación a medida, filtros por ambiente, búsqueda combinada sin distinción de tildes, estado vacío y restablecimiento, fichas con consulta individual, galería ampliable, proceso propuesto, presentación, espacio de testimonios, cotización validada con resumen editable mediante regreso al formulario, copia de consulta, enlaces a Instagram y botón flotante de WhatsApp. Navegación móvil, enfoque visible, cierre de modales por Escape, reducción de movimiento y carga diferida de imágenes.
 
 No hay envío de formulario a un backend. El usuario revisa el mensaje y decide continuar y enviarlo desde WhatsApp. No se almacenan datos en localStorage, cookies ni base de datos.
 
@@ -39,8 +39,9 @@ No hay envío de formulario a un backend. El usuario revisa el mensaje y decide 
 
 El teléfono se leyó el 24/11/2026 en la biografía pública de @fatcomuebles: `+56 990 59 9959`, normalizado como `56990599959`. Se centraliza en `src/data/config.js`; confirmar vigencia con el propietario. La misma fuente indica La Cruz, Quillota, La Calera y la quinta región.
 
-No se han inventado precios, stock, materiales, dimensiones, antigüedad, garantías, infraestructura del taller ni testimonios. Los modelos del catálogo son propuestas ilustrativas. Sus campos técnicos están preparados y se muestran pendientes de confirmar. Las imágenes de Instagram son portadas públicas; la reproducción completa de los reels y los comentarios requiere sesión de Instagram y no fue verificada.
+El 27/11/2026 se integraron las cinco fotografías, el logotipo y los dos videos entregados en `imagenes-fatco/` y `videos-fatco/`. Los originales se conservan localmente, se verifican por SHA-256 y se excluyen de Git. Las copias WebP y MP4 están en `public/assets/`; `docs/MATERIAL-FATCO.json` documenta su procedencia, tamaños y transformación. El cliente confirmó sillones de madera y metal como estándar, y clósets y mobiliario de quincho como muebles a medida. Las denominaciones son descriptivas; no se inventaron precios, stock, medidas, especies de madera ni fichas técnicas.
 
+El correo confirmado es `Fatcospa@gmail.com`, centralizado en `src/data/config.js`. Se mantiene el teléfono anterior sin cambios. No hay testimonios incorporados. El video de presentación (29 s) aparece en Somos FATCO; el recorrido de un clóset (2 min 16 s) se abre desde la galería. Ambos usan controles nativos, proporciones originales, `playsinline` y `preload="none"`, sin autoplay. El logotipo proviene del JPEG recibido; solo se quitaron márgenes exteriores vacíos y se generó un favicon con el símbolo oficial. El icono WhatsApp es Bootstrap Icons, MIT, con licencia incluida.
 Antes de lanzamiento comercial: confirmar catálogo y precios, fichas técnicas, derechos de las imágenes, fotografías definitivas, identidad gráfica, datos de empresa, cobertura, despacho, instalación, plazos, garantías y condiciones. Incorporar testimonios únicamente con comentario original, fuente y evidencia de autorización.
 
 ## Publicación gratuita
@@ -64,6 +65,12 @@ Cloudflare Pages también admite `dist/` con Direct Upload. Se prefirió GitHub 
 - https://www.instagram.com/fatcomuebles/
 - https://espaciohogar.cl/categoria/muebles-a-medida/
 - https://arcamuebles.cl/pages/profesionales
-- Fotografías de inspiración: Unsplash, detalle en `public/fuentes.html`.
+- Material visual entregado por FATCO: ver `docs/MATERIAL-FATCO.json`.
+- Icono WhatsApp: https://icons.getbootstrap.com/icons/whatsapp/ (MIT).
 
-Las referencias informaron el uso de fotografías protagonistas, proyectos y recorrido de cotización. No se copiaron sus diseños, condiciones comerciales ni textos. El monograma, la composición y la combinación de terracota, grafito, madera y blanco cálido constituyen una propuesta gráfica para revisión.
+Las referencias informaron el uso de fotografías protagonistas, proyectos y recorrido de cotización. No se copiaron sus diseños, condiciones comerciales ni textos. Se conserva la composición cálida del prototipo; el monograma provisional se reemplazó por el logotipo oficial entregado por FATCO.
+
+
+## Preparación del material real
+
+`node scripts/prepare-fatco-media.mjs` usa FFmpeg/FFprobe instalados en el equipo para generar las copias web. Requiere los originales locales ignorados por Git y no los modifica. No es necesario ejecutarlo en GitHub Pages ni al reconstruir un cambio de texto. Los archivos de origen no se incluyen en la publicación. La copia corta pesa 3,65 MB y la larga 11,42 MB; el sitio conserva la condición de prototipo. Antes de operar comercialmente se debe revisar el alojamiento definitivo y las condiciones de GitHub Pages.

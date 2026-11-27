@@ -5,3 +5,5 @@ dist/
 *.log
 docs/qa/*.png
 docs/qa/*.jpg
+imagenes-fatco/
+videos-fatco/

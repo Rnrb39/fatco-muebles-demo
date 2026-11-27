@@ -1,0 +1,105 @@
+{
+  "preparedOn": "2026-11-27",
+  "entries": [
+    {
+      "source": "imagenes-fatco/WhatsApp Image 2026-11-20 at 17.51.44.jpeg",
+      "sourceBytes": 213961,
+      "sourceSha256": "1d4bb988364add6203693ed1ffd8ed79bcb2edbf54661325ad15a8aa994f0ac8",
+      "output": "public/assets/asientos-taller.webp",
+      "outputBytes": 207726,
+      "kind": "photo"
+    },
+    {
+      "source": "imagenes-fatco/WhatsApp Image 2026-11-20 at 17.52.52.jpeg",
+      "sourceBytes": 369503,
+      "sourceSha256": "80280f66331a8f3d5365b0b20a6228f15c4ef488f05daaa630420a81132b16a0",
+      "output": "public/assets/conjunto-terraza.webp",
+      "outputBytes": 316146,
+      "kind": "photo"
+    },
+    {
+      "source": "imagenes-fatco/WhatsApp Image 2026-11-25 at 16.18.20.jpeg",
+      "sourceBytes": 108316,
+      "sourceSha256": "c1ce256dbdf4514b6cd131056c9a97e363ca54a5cc9cb21eced54df45c9c2dad",
+      "output": "public/assets/mueble-quincho.webp",
+      "outputBytes": 85468,
+      "kind": "photo"
+    },
+    {
+      "source": "imagenes-fatco/WhatsApp Image 2026-11-25 at 16.23.17 (1).jpeg",
+      "sourceBytes": 88200,
+      "sourceSha256": "dfffef41163ae018f5aed14959b04c1863283aa07f7c47c5f17e364d5793703c",
+      "output": "public/assets/closet-cerrado.webp",
+      "outputBytes": 56840,
+      "kind": "photo"
+    },
+    {
+      "source": "imagenes-fatco/WhatsApp Image 2026-11-25 at 16.23.17.jpeg",
+      "sourceBytes": 100983,
+      "sourceSha256": "17aa0a8478ebe8702af2643ae2acbe11beadf10a32ee6b93a0e86ed51885131f",
+      "output": "public/assets/closet-interior.webp",
+      "outputBytes": 61420,
+      "kind": "photo"
+    },
+    {
+      "source": "imagenes-fatco/logo-fatco.jpeg",
+      "sourceBytes": 35115,
+      "sourceSha256": "3a39cdcc8456fdde31ea4bc6606ee2da29b5cd55d249d36e71ff46f27cb83959",
+      "output": "public/assets/logo-fatco.webp",
+      "outputBytes": 13558,
+      "kind": "logo",
+      "note": "Solo retiro de mÃ¡rgenes vacÃ­os exteriores; sÃ­mbolo, letras, lema y colores conservados."
+    },
+    {
+      "source": "imagenes-fatco/logo-fatco.jpeg",
+      "sourceBytes": 35115,
+      "sourceSha256": "3a39cdcc8456fdde31ea4bc6606ee2da29b5cd55d249d36e71ff46f27cb83959",
+      "output": "public/assets/favicon.png",
+      "outputBytes": 5091,
+      "kind": "favicon",
+      "note": "SÃ­mbolo oficial extraÃ­do del original para legibilidad a tamaÃ±o pequeÃ±o."
+    },
+    {
+      "source": "videos-fatco/WhatsApp Video 2026-11-25 at 16.15.58.mp4",
+      "sourceBytes": 4861631,
+      "sourceSha256": "9a475f4f50250dce063656be59420e8c9f65d3d3cf4693416255ed0d137805a7",
+      "output": "public/assets/presentacion-fatco.mp4",
+      "outputBytes": 3650905,
+      "kind": "video",
+      "duration": 28.723084,
+      "codec_type": "video",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "source": "videos-fatco/WhatsApp Video 2026-11-25 at 16.15.58.mp4",
+      "sourceBytes": 4861631,
+      "sourceSha256": "9a475f4f50250dce063656be59420e8c9f65d3d3cf4693416255ed0d137805a7",
+      "output": "public/assets/presentacion-fatco-portada.webp",
+      "outputBytes": 42246,
+      "kind": "poster",
+      "frameSecond": 21
+    },
+    {
+      "source": "videos-fatco/WhatsApp Video 2026-11-25 at 16.23.23.mp4",
+      "sourceBytes": 30318303,
+      "sourceSha256": "01c7ea82f402ac20620beb8b1d372c91a58b10581b38da7a0539ebbaf9a1a78a",
+      "output": "public/assets/recorrido-closet.mp4",
+      "outputBytes": 11422823,
+      "kind": "video",
+      "duration": 135.6,
+      "codec_type": "video",
+      "width": 478,
+      "height": 850
+    },
+    {
+      "source": "videos-fatco/WhatsApp Video 2026-11-25 at 16.23.23.mp4",
+      "sourceBytes": 30318303,
+      "sourceSha256": "01c7ea82f402ac20620beb8b1d372c91a58b10581b38da7a0539ebbaf9a1a78a",
+      "output": "public/assets/recorrido-closet-portada.webp",
+      "outputBytes": 5656,
+      "kind": "poster",
+      "frameSecond": 3
+    }
+  ]
+}

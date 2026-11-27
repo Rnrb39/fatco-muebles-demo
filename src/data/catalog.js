@@ -1,14 +1,12 @@
-// Propuestas ilustrativas: no representan disponibilidad ni productos confirmados.
+// Fotografías entregadas por FATCO. Clasificación confirmada por el cliente.
+// Denominaciones descriptivas, no nombres comerciales de modelos.
 export const categories = [
-  { id: 'todos', label: 'Todos los muebles' }, { id: 'living', label: 'Living' },
-  { id: 'comedor', label: 'Comedor' }, { id: 'oficina', label: 'Home office' }, { id: 'dormitorio', label: 'Dormitorio' },
+ {id:'todos',label:'Todos los muebles'},
+ {id:'estandar',label:'Línea estándar'},
+ {id:'a-medida',label:'A medida'},
 ];
 export const products = [
-  { id:'mesa-comedor', name:'Mesa de comedor', category:'comedor', image:'comedor-referencial.jpg', description:'Una mesa como punto de encuentro. Consulta por alternativas de diseño para tu comedor.' },
-  { id:'sillon', name:'Silla de lectura', category:'living', image:'sillon-referencial.jpg', description:'Una propuesta para crear un rincón de pausa. Modelo ilustrativo para explorar el catálogo.' },
-  { id:'escritorio', name:'Escritorio de trabajo', category:'oficina', image:'escritorio-referencial.jpg', description:'Un espacio para concentrarte. Cuéntanos qué necesitas para tu zona de trabajo.' },
-  { id:'mesa-centro', name:'Mesa de centro', category:'living', image:'ambiente-referencial.jpg', description:'Un punto central para tu living. Comparte tus preferencias de forma, tamaño y terminación.' },
-  { id:'velador', name:'Velador de dormitorio', category:'dormitorio', image:'dormitorio-referencial.jpg', description:'Una propuesta para acompañar tus espacios de descanso. Consulta por opciones con FATCO.' },
-  { id:'arrimo', name:'Mesa auxiliar', category:'living', image:'arrimo-referencial.jpg', description:'Un mueble de apoyo para ordenar y dar carácter a tu espacio. Referencia de estilo, sujeta a confirmación.' },
-].map(p => ({ ...p, images:[p.image], dimensions:null, materials:null, price:null, currency:'CLP', illustrative:true }));
-
+ {id:'sillones-estructura-metalica',name:'Sillones de estructura metálica',category:'estandar',kind:'Mueble estándar',image:'conjunto-terraza.webp',alt:'Conjunto de sillones de madera y estructura metálica junto a una mesa, en fotografía entregada por FATCO',description:'La calidez de la madera y la presencia del metal en una línea de asientos de FATCO. Consulta los formatos y la composición disponibles.',materials:'Madera y metal. Especificaciones y terminaciones por confirmar.'},
+ {id:'mobiliario-quincho',name:'Mobiliario para quinchos',category:'a-medida',kind:'Mueble a medida',image:'mueble-quincho.webp',alt:'Mobiliario de FATCO bajo un mesón con lavaplatos, junto a un quincho',description:'Una propuesta de mobiliario a medida para organizar el espacio de preparación y encuentro. Consulta el diseño y las terminaciones para tu proyecto.'},
+ {id:'closet-organizacion',name:'Clóset con organización interior',category:'a-medida',kind:'Mueble a medida',image:'closet-cerrado.webp',alt:'Clóset blanco de FATCO con puertas y cajonera, realizado a medida',description:'Puertas, cajones y espacios de guardado en una solución diseñada a medida. Conversa con FATCO sobre la distribución que necesitas.',images:['closet-cerrado.webp','closet-interior.webp']},
+].map(p=>({dimensions:null,materials:null,price:null,currency:'CLP',...p,images:p.images||[p.image],illustrative:false}));

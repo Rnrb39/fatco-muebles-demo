@@ -9,8 +9,8 @@ const html=await readFile('dist/index.html','utf8');
 assert.match(html,/noindex, nofollow, noarchive/);
 assert.match(await readFile('dist/robots.txt','utf8'),/Disallow: \//);
 assert.equal(new Set(products.map(p=>p.id)).size,products.length);
-for(const p of products){assert(p.illustrative);assert.equal(p.price,null);for(const image of p.images) await access(`dist/assets/${image}`);}
-for(const p of projects){await access(`dist/assets/${p.image}`);assert.match(p.source,/^https:\/\/www.instagram.com\/fatcomuebles\//);}
+for(const p of products){assert.equal(p.illustrative,false);assert.equal(p.price,null);for(const image of p.images) await access(`dist/assets/${image}`);}
+for(const p of projects){await access(`dist/assets/${p.image}`);if(p.video)await access(`dist/assets/${p.video}`);}
 for(const t of testimonials){assert(t.consent?.approved&&t.consent.evidenceRef&&t.sourceUrl);}
 const url=new URL(whatsappUrl('Prueba: ñ & + 50%'));
 assert.equal(url.pathname,`/${business.whatsapp}`);assert.equal(url.searchParams.get('text'),'Prueba: ñ & + 50%');
