@@ -1,8 +1,8 @@
-import { business } from './data/config.js';
-import { projects } from './data/gallery.js';
-import { testimonials } from './data/testimonials.js';
-import { whatsappUrl, quoteMessage } from './services/contact.js';
-import { initCatalog, escapeHtml as esc } from './components/catalog.js';
+import { business } from './data/config.js?v=d39c15d9b3ee';
+import { projects } from './data/gallery.js?v=d39c15d9b3ee';
+import { testimonials } from './data/testimonials.js?v=d39c15d9b3ee';
+import { whatsappUrl, quoteMessage } from './services/contact.js?v=d39c15d9b3ee';
+import { initCatalog, escapeHtml as esc } from './components/catalog.js?v=d39c15d9b3ee';
 
 const dialog = document.querySelector('#detail-dialog');
 const dialogContent = document.querySelector('#dialog-content');

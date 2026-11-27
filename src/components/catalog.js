@@ -1,4 +1,4 @@
-import { products, categories } from '../data/catalog.js';
+import { products, categories } from '../data/catalog.js?v=d39c15d9b3ee';
 export const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function initCatalog(openProduct) {
   const filters = document.querySelector('#category-filters');

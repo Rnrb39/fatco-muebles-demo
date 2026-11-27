@@ -1,4 +1,4 @@
-import { business } from '../data/config.js';
+import { business } from '../data/config.js?v=d39c15d9b3ee';
 export function whatsappUrl(message = 'Hola, FATCO. Vengo desde el prototipo web y quisiera consultar por un mueble.') {
   if (!/^\d{10,15}$/.test(business.whatsapp)) return null;
   return `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(message)}`;
